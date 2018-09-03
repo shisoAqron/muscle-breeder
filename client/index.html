@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mascle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>筋肉育成</h1>
+        </div>
+    </header>
+    <script src="functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script src="processing.min.js"></script>
+    <div class="canvas-container">
+        <canvas data-processing-sources="kinniku.pde Muscle.pde"></canvas>
+    </div>
+
+    <div class="level-container">
+        <h2 class="level"></h2>
+    </div>
+
+    <div class="load-container">
+        <h3 class="left"></h3>
+        <h3 class="load"></h3>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="chart.js"></script>
+</body>
+
+</html>
