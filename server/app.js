@@ -1,9 +1,10 @@
 const fs = require("fs")
+const path = require("path")
 const Obniz = require("obniz")
 const admin = require('firebase-admin')
-const Myoware = require('./Myoware')
+const Myoware = require(path.join(__dirname,'/Myoware'))
 Obniz.PartsRegistrate(Myoware)
-const Muscle = require('./Muscle')
+const Muscle = require(path.join(__dirname,'Muscle'))
 
 const serviceAccount = require('./muscle-breeder-firebase-adminsdk.json')
 admin.initializeApp({
@@ -14,7 +15,7 @@ const db = admin.database()
 const status = db.ref("status")
 const logs = db.ref("logs")
 
-const tokenObj = JSON.parse(fs.readFileSync('./token.json', 'utf8'))
+const tokenObj = JSON.parse(fs.readFileSync(path.join(__dirname,'/token.json'), 'utf8'))
 const obniz = new Obniz(tokenObj.id)
 const muscle = new Muscle(obniz)
 
