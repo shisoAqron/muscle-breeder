@@ -46,7 +46,7 @@ obniz.onconnect = async () => {
                 status.set({
                     mode: 'standby'
                 })
-                console.log(data)
+                //console.log(data)
                 break;
             
             case 'getPower':

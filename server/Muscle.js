@@ -64,7 +64,7 @@ class Muscle {
                 // 力の入れ始め
                 if(!this.powerKeep) {
                     this.powerKeep = true
-                    console.log('getPower!')
+                    //console.log('getPower!')
                     this.setPKStart(now)
 
                     this.obniz.display.clear()
